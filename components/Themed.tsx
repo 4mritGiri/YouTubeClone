@@ -42,3 +42,5 @@ export function View(props: ViewProps) {
 
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
+
+// export const color = useThemeColor({ light? '#282828' : '#fff'});

@@ -5,6 +5,7 @@ import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 
+// import VideoScreen from './VideoScreen';
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
@@ -38,12 +39,14 @@ export default function RootLayout() {
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
+   // <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
   return (
     <>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+		  <Stack.Screen name="Notifications" options={{ headerShown: false}}/>         
+          <Stack.Screen name="VideoScreen" options={{ headerShown: false }} />
         </Stack>
       </ThemeProvider>
     </>
